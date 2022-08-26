@@ -1,4 +1,4 @@
-module github.com/Doozers/BertyAuthTemplate
+module github.com/berty/berty-bot-metamask-connect
 
 go 1.18
 
