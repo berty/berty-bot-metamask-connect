@@ -8,7 +8,6 @@ import {encodePubKeyAndSig} from "../utils/utils";
 const URL = 'http://localhost:3000';
 
 function Sign(): JSX.Element {
-
     async function GetEncodedInfos(nonce: string): Promise<string> {
         return await encodePubKeyAndSig(nonce)
     }
