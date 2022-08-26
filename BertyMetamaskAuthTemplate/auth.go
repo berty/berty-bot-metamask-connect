@@ -24,8 +24,8 @@ func LinkMetamask(db *gorm.DB) func(ctx bertybot.Context) {
 
 		_ = ctx.ReplyString("Please link your metamask account following this link:" + opts.authAddr + "sign?nonce=" + strconv.Itoa(int(nonce)))
 		fmt.Println("Please link your metamask account following this link:" + opts.authAddr + "sign?nonce=" + strconv.Itoa(int(nonce)))
+		
 		// add to db user
-
 		var user User
 
 		res := db.First(&user, "berty_conv_pub_key = ?", ctx.ConversationPK)
