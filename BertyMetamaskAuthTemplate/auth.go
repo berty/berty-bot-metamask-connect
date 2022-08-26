@@ -85,10 +85,6 @@ func VerifyMetamask(db *gorm.DB) func(ctx bertybot.Context) {
 		nonce := user.Nonce
 		nonceStr := strconv.Itoa(int(nonce))
 
-		fmt.Println("nonce: |" + nonceStr + "|")
-		fmt.Println("sig: |" + sig + "|")
-		fmt.Println("pubkey: |" + pubkey + "|")
-
 		verify, err := ethsign.Verify(nonceStr, sig, pubkey, ethsign.Metamask)
 		fmt.Println(verify)
 		if err != nil {
