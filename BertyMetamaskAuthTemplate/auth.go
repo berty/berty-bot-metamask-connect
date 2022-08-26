@@ -71,7 +71,6 @@ func VerifyMetamask(db *gorm.DB) func(ctx bertybot.Context) {
 			_ = ctx.ReplyString(err.Error())
 			return
 		}
-		//
 
 		// decode base64 encoded code to retrieve pubkey and Nonce
 		pubkey, sig, err := retrieveInfos(code)
